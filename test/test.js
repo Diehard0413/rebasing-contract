@@ -49,8 +49,12 @@ contract('test for all', async accounts => {
         console.log("Account2 balance: ", (await rebasingToken.balanceOf(accounts[2], {from: accounts[0]})).toString());
     })
 
-    it('intialize of staking contract', async () => {
+    it('intialize of staking contract address', async () => {
+        await rebasingToken.setStakingAddr(stakingContract.address, {from: accounts[0]});
+        console.log("Staking contract address was set: ", (await rebasingToken.stakingContract({from: accounts[0]})).toString());
+    })
+
+    it('interact with staking contract', async () => {
         await stakingContract.stake(web3.utils.toBN("100"), {from: accounts[1]});
-        await stakingContract.stake(web3.utils.toBN("200"), {from: accounts[2]});
     })
 })

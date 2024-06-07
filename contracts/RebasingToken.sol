@@ -25,10 +25,18 @@ contract RebasingToken is ERC20, Ownable, IRebasingToken {
 
     uint256 private _gonsPerFragment;
     
+    address public stakingContract;
     Rebase[] public rebases;
     
     mapping(address => uint256) private _gonBalances;
     mapping(address => mapping(address => uint256)) private _allowedValue;
+
+    modifier onlyStakingContract() {
+        require(msg.sender == stakingContract, "Rebasing Token:: Caller is not staking contract");
+        _;
+    }
+
+    event StakingContractUpdated(address stakingAddr);
 
     constructor() ERC20("RebasingToken", "RBT") {
         _totalSupply = INITIAL_SUPPLY;
@@ -38,7 +46,7 @@ contract RebasingToken is ERC20, Ownable, IRebasingToken {
         emit Transfer(address(0x0), msg.sender, _totalSupply);
     }
 
-     function _approve(
+    function _approve(
         address owner,
         address spender,
         uint256 value
@@ -48,7 +56,7 @@ contract RebasingToken is ERC20, Ownable, IRebasingToken {
     }
 
     function circulatingSupply() public view override returns (uint256) {
-        return _totalSupply;
+        return _totalSupply.sub(balanceOf(stakingContract));
     }
 
     function balanceOf(address account) public view override(IERC20, ERC20) returns (uint256) {
@@ -93,7 +101,13 @@ contract RebasingToken is ERC20, Ownable, IRebasingToken {
         return true;
     }
 
-    function rebase(uint256 profit, uint256 epoch) external override onlyOwner returns (uint256) {
+    function setStakingAddr(address stakingAddr) external onlyOwner {
+        stakingContract = stakingAddr;
+
+        emit StakingContractUpdated(stakingAddr);
+    }
+
+    function rebase(uint256 profit, uint256 epoch) external override onlyStakingContract() returns (uint256) {
         uint256 rebaseAmount;
         uint256 prevCirculatingSupply = circulatingSupply();
 
