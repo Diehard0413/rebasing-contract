@@ -9,13 +9,24 @@ import "./utils/Ownable.sol";
 contract RebasingToken is ERC20, Ownable, IRebasingToken {
     using SafeMath for uint256;
 
+    struct Rebase {
+        uint256 epoch;
+        uint256 rebase;
+        uint256 totalStakedBefore;
+        uint256 totalStakedAfter;
+        uint256 amountRebased;
+        uint256 blockNumberOccured;
+    }
+
     uint256 private constant MAX_UINT256 = type(uint256).max;
     uint256 private constant MAX_SUPPLY = ~uint128(0);
     uint256 private constant INITIAL_SUPPLY = 1000000 * 10 ** 18;
     uint256 private constant TOTAL_GONS = MAX_UINT256 - (MAX_UINT256 % INITIAL_SUPPLY);
 
     uint256 private _gonsPerFragment;
-
+    
+    Rebase[] public rebases;
+    
     mapping(address => uint256) private _gonBalances;
     mapping(address => mapping(address => uint256)) private _allowedValue;
 
@@ -82,9 +93,40 @@ contract RebasingToken is ERC20, Ownable, IRebasingToken {
         return true;
     }
 
-    function rebase(uint256 newSupply) external onlyOwner override {
-        require(newSupply > 0, "New supply must be greater than 0");
-        _gonsPerFragment = _totalSupply / newSupply;
-        _mint(msg.sender, newSupply);
+    function rebase(uint256 profit, uint256 epoch) external override onlyOwner returns (uint256) {
+        uint256 rebaseAmount;
+        uint256 prevCirculatingSupply = circulatingSupply();
+
+        if (profit == 0) {
+            emit Rebased(epoch, 0, _totalSupply);
+            return _totalSupply;
+        } else if (prevCirculatingSupply > 0) {
+            rebaseAmount = profit.mul(_totalSupply).div(prevCirculatingSupply);
+        } else {
+            rebaseAmount = profit;
+        }
+
+        _totalSupply = _totalSupply.add(rebaseAmount);
+
+        if (_totalSupply > MAX_SUPPLY) {
+            _totalSupply = MAX_SUPPLY;
+        }
+        
+        _gonsPerFragment = TOTAL_GONS.div(_totalSupply);
+
+        uint256 rebasePercent = profit.mul(1e18).div(prevCirculatingSupply);
+        rebases.push(
+            Rebase({
+                epoch: epoch,
+                rebase: rebasePercent,
+                totalStakedBefore: prevCirculatingSupply,
+                totalStakedAfter: circulatingSupply(),
+                amountRebased: profit,
+                blockNumberOccured: block.number
+            })
+        );
+
+        emit Rebased(epoch, rebasePercent, _totalSupply);
+        return _totalSupply;
     }    
 }
