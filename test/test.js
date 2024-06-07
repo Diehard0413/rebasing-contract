@@ -21,11 +21,11 @@ contract('test for all', async accounts => {
 
     it('distribution of lp token', async () => {     
         await lpToken.transfer(accounts[1], web3.utils.toBN("100000"), {from: accounts[0]});
-        await lpToken.transfer(accounts[2], web3.utils.toBN("100000"), {from: accounts[0]});
+        await lpToken.transfer(accounts[2], web3.utils.toBN("200000"), {from: accounts[0]});
     })
 
     it('distribution of rebasing token', async () => {     
-        await rebasingToken.transfer(accounts[1], web3.utils.toBN("200000"), {from: accounts[0]});
+        await rebasingToken.transfer(accounts[1], web3.utils.toBN("100000"), {from: accounts[0]});
         await rebasingToken.transfer(accounts[2], web3.utils.toBN("200000"), {from: accounts[0]});
     })
 
