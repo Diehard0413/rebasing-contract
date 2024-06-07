@@ -21,7 +21,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/tokens/ERC165.sol\":\"ERC165\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0x4ef5e50b58339997ac135314355e5429637e2b4bb2390822238967a6342700ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8c3359dacf07f3f7eac26f0ac5ba823024d815014d65f4c55d9401ac29b410b2\",\"dweb:/ipfs/QmUhQ8vqKUAZpKYdapw7vaUb671Nji2VGDbsVsN52vfqEp\"]},\"project:/contracts/tokens/ERC165.sol\":{\"keccak256\":\"0x8608033770c92174627b8f8dd4f3ecfeb497a2f000ccac30e6cba9c925cd478f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0a96cff1da22b3948a79ddbe8f134950cbc2c54557bfe5194b626674193f1292\",\"dweb:/ipfs/QmeFyjJzVmMGbrD8Ur9yLjddQEB9SWdpAPQpHacizAp6QP\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/tokens/ERC165.sol\":\"ERC165\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC165.sol\":{\"keccak256\":\"0x79234c0f6e1c6edf971bbc454cec940242d94bf7040a1a2eeca2a854d4843833\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://270687a99c3429339c3e04721eabc07ecbfcefdd90b8622c44cad4627cdc3c50\",\"dweb:/ipfs/QmQYQdu1mdvCgBSThdG2tbutWYUBFRCcmH1KkM8v3UKzt5\"]},\"project:/contracts/tokens/ERC165.sol\":{\"keccak256\":\"0x192bf23374e061ec1fe5f61dbcb2ad52abda9f0571ed8a74b0664b5ec541dc52\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://66adfdf6ad232df47550102c3855aba0d1d724005837f2a3e414684209445807\",\"dweb:/ipfs/QmQwB5Kwb6UjmxtzfenfrqKcFD9oVxoV2bqWC8kXinzvhR\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -29,7 +29,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.21;\r\n\r\nimport \"../interfaces/IERC165.sol\";\r\n\r\nabstract contract ERC165 is IERC165 {\r\n    function supportsInterface(bytes4 interfaceId)\r\n        public\r\n        view\r\n        virtual\r\n        override\r\n        returns (bool)\r\n    {\r\n        return interfaceId == type(IERC165).interfaceId;\r\n    }\r\n}",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\nimport \"../interfaces/IERC165.sol\";\r\n\r\nabstract contract ERC165 is IERC165 {\r\n    function supportsInterface(bytes4 interfaceId)\r\n        public\r\n        view\r\n        virtual\r\n        override\r\n        returns (bool)\r\n    {\r\n        return interfaceId == type(IERC165).interfaceId;\r\n    }\r\n}",
   "sourcePath": "F:\\Works\\Hundpad\\Staking\\V2\\rebasing-contract\\contracts\\tokens\\ERC165.sol",
   "ast": {
     "absolutePath": "project:/contracts/tokens/ERC165.sol",
@@ -51,7 +51,7 @@
           "solidity",
           "^",
           "0.8",
-          ".21"
+          ".19"
         ],
         "nodeType": "PragmaDirective",
         "src": "33:24:14"
@@ -314,7 +314,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-06-07T10:44:05.983Z",
+  "updatedAt": "2024-06-07T10:50:50.366Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

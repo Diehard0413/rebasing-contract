@@ -1,7 +1,7 @@
 {
   "contractName": "Context",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/utils/Context.sol\":\"Context\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/utils/Context.sol\":{\"keccak256\":\"0x2f970f8b645e81a2838c5e8811cbb7875c8425f221595fd16b7aa196667c129e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5939d06e3c1fddb2b428520b2b4ee7267706b167614ff0099de0ab4593505325\",\"dweb:/ipfs/QmavVrcGPwVhZKj1C15E3dGJLhZNX557w1PMTL7qd5Zb8J\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/utils/Context.sol\":\"Context\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/utils/Context.sol\":{\"keccak256\":\"0x7077cb580a5802b83f5c8f8991cb889ba767f8bdce74ee1d621eff70345789eb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2403b622d241df5288e38e6068f61796b67bdc27c578692abaf9b75d67fa0bbd\",\"dweb:/ipfs/QmX44UsAhJ7fVgdFdymv9V1uRTvTPJjmbcEFLDY4b5dHAL\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -9,7 +9,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.21;\r\n\r\nabstract contract Context {\r\n    function _msgSender() internal view virtual returns (address) {\r\n        return msg.sender;\r\n    }\r\n\r\n    function _msgData() internal view virtual returns (bytes calldata) {\r\n        return msg.data;\r\n    }\r\n}",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.19;\r\n\r\nabstract contract Context {\r\n    function _msgSender() internal view virtual returns (address) {\r\n        return msg.sender;\r\n    }\r\n\r\n    function _msgData() internal view virtual returns (bytes calldata) {\r\n        return msg.data;\r\n    }\r\n}",
   "sourcePath": "F:\\Works\\Hundpad\\Staking\\V2\\rebasing-contract\\contracts\\utils\\Context.sol",
   "ast": {
     "absolutePath": "project:/contracts/utils/Context.sol",
@@ -28,7 +28,7 @@
           "solidity",
           "^",
           "0.8",
-          ".21"
+          ".19"
         ],
         "nodeType": "PragmaDirective",
         "src": "33:24:20"
@@ -252,7 +252,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-06-07T10:44:06.144Z",
+  "updatedAt": "2024-06-07T10:50:50.429Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
