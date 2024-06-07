@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-interface IRebasingToken {
-    function totalSupply() external view returns (uint256);
-    function balanceOf(address account) external view returns (uint256);
-    function transfer(address recipient, uint256 amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+import "./IERC20.sol";
+
+interface IRebasingToken is IERC20 {
+    function circulatingSupply() external view returns (uint256);
+    function gonsForBalance(uint256 amount) external view returns (uint256);
+    function balanceForGons(uint256 gons) external view returns (uint256);
     function rebase(uint256 newSupply) external;
 }

@@ -2,11 +2,11 @@
 pragma solidity ^0.8.19;
 
 import "../../utils/AccessControlEnumerable.sol";
-import "./ERC20Burnable.sol";
+import "../ERC20.sol";
 
 contract ERC20PresetMinterRebaser is
     AccessControlEnumerable,
-    ERC20Burnable
+    ERC20
 {
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant REBASER_ROLE = keccak256("REBASER_ROLE");
