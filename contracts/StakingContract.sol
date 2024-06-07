@@ -34,7 +34,7 @@ contract StakingContract is Ownable {
     event Claim(address indexed user, uint256 amount);
     event Compound(address indexed user, uint256 amount);
 
-    constructor(IRebasingToken _stakingToken, IERC20 _lpToken) {
+    constructor(IERC20 _lpToken, IRebasingToken _stakingToken) {
         stakingToken = _stakingToken;
         lpToken = _lpToken;
         _lastRewardTime = block.timestamp;

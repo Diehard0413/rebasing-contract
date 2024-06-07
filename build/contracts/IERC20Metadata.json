@@ -224,7 +224,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC20Metadata.sol\":\"IERC20Metadata\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC20.sol\":{\"keccak256\":\"0x1b576d4a85be85f7abbe3980a2b4267df051227e78ae35318438f236991b9e2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f19ddfb3fa901deb59f26d3de5d433828063f5a6875b0ce6f6ffa6c00f563f2\",\"dweb:/ipfs/QmVziMh6UfkhxR89tQrmXPqnBtmAsAUUetdZbxPmPAT8S9\"]},\"project:/contracts/interfaces/IERC20Metadata.sol\":{\"keccak256\":\"0x5e4041092cf630b033644f2a4d68084aa371c4e48ba09dddd28930084f014e27\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6f1e43deea3bed7e5f312933117175084c82b9c953850b56927a518007ed4cd6\",\"dweb:/ipfs/QmQfomvHsHkgPpdKksPeWwm7zc95XRmFpVWdSYycf8Qxo3\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IERC20Metadata.sol\":\"IERC20Metadata\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IERC20.sol\":{\"keccak256\":\"0x1b576d4a85be85f7abbe3980a2b4267df051227e78ae35318438f236991b9e2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7f19ddfb3fa901deb59f26d3de5d433828063f5a6875b0ce6f6ffa6c00f563f2\",\"dweb:/ipfs/QmVziMh6UfkhxR89tQrmXPqnBtmAsAUUetdZbxPmPAT8S9\"]},\"project:/contracts/interfaces/IERC20Metadata.sol\":{\"keccak256\":\"0x5e4041092cf630b033644f2a4d68084aa371c4e48ba09dddd28930084f014e27\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6f1e43deea3bed7e5f312933117175084c82b9c953850b56927a518007ed4cd6\",\"dweb:/ipfs/QmQfomvHsHkgPpdKksPeWwm7zc95XRmFpVWdSYycf8Qxo3\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -238,18 +238,18 @@
     "absolutePath": "project:/contracts/interfaces/IERC20Metadata.sol",
     "exportedSymbols": {
       "IERC20": [
-        1053
+        1012
       ],
       "IERC20Metadata": [
-        1074
+        1033
       ]
     },
-    "id": 1075,
+    "id": 1034,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1055,
+        "id": 1014,
         "literals": [
           "solidity",
           "^",
@@ -262,11 +262,11 @@
       {
         "absolutePath": "project:/contracts/interfaces/IERC20.sol",
         "file": "./IERC20.sol",
-        "id": 1056,
+        "id": 1015,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 1075,
-        "sourceUnit": 1054,
+        "scope": 1034,
+        "sourceUnit": 1013,
         "src": "61:22:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -276,16 +276,16 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 1057,
+              "id": 1016,
               "name": "IERC20",
               "nameLocations": [
                 "115:6:7"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1053,
+              "referencedDeclaration": 1012,
               "src": "115:6:7"
             },
-            "id": 1058,
+            "id": 1017,
             "nodeType": "InheritanceSpecifier",
             "src": "115:6:7"
           }
@@ -294,10 +294,10 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 1074,
+        "id": 1033,
         "linearizedBaseContracts": [
-          1074,
-          1053
+          1033,
+          1012
         ],
         "name": "IERC20Metadata",
         "nameLocation": "97:14:7",
@@ -305,7 +305,7 @@
         "nodes": [
           {
             "functionSelector": "06fdde03",
-            "id": 1063,
+            "id": 1022,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -313,23 +313,23 @@
             "nameLocation": "138:4:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1059,
+              "id": 1018,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "142:2:7"
             },
             "returnParameters": {
-              "id": 1062,
+              "id": 1021,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1061,
+                  "id": 1020,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1063,
+                  "scope": 1022,
                   "src": "168:13:7",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -338,7 +338,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1060,
+                    "id": 1019,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "168:6:7",
@@ -352,7 +352,7 @@
               ],
               "src": "167:15:7"
             },
-            "scope": 1074,
+            "scope": 1033,
             "src": "129:54:7",
             "stateMutability": "view",
             "virtual": false,
@@ -360,7 +360,7 @@
           },
           {
             "functionSelector": "95d89b41",
-            "id": 1068,
+            "id": 1027,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -368,23 +368,23 @@
             "nameLocation": "200:6:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1064,
+              "id": 1023,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "206:2:7"
             },
             "returnParameters": {
-              "id": 1067,
+              "id": 1026,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1066,
+                  "id": 1025,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1068,
+                  "scope": 1027,
                   "src": "232:13:7",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -393,7 +393,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1065,
+                    "id": 1024,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "232:6:7",
@@ -407,7 +407,7 @@
               ],
               "src": "231:15:7"
             },
-            "scope": 1074,
+            "scope": 1033,
             "src": "191:56:7",
             "stateMutability": "view",
             "virtual": false,
@@ -415,7 +415,7 @@
           },
           {
             "functionSelector": "313ce567",
-            "id": 1073,
+            "id": 1032,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -423,23 +423,23 @@
             "nameLocation": "264:8:7",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1069,
+              "id": 1028,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "272:2:7"
             },
             "returnParameters": {
-              "id": 1072,
+              "id": 1031,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1071,
+                  "id": 1030,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1073,
+                  "scope": 1032,
                   "src": "298:5:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -448,7 +448,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 1070,
+                    "id": 1029,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "298:5:7",
@@ -462,31 +462,27 @@
               ],
               "src": "297:7:7"
             },
-            "scope": 1074,
+            "scope": 1033,
             "src": "255:50:7",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1075,
+        "scope": 1034,
         "src": "87:221:7",
-        "usedErrors": [],
-        "usedEvents": [
-          994,
-          1002
-        ]
+        "usedErrors": []
       }
     ],
     "src": "33:275:7"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+    "version": "0.8.19+commit.7dd6d404.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-06-07T12:45:09.795Z",
+  "updatedAt": "2024-06-07T12:59:52.815Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -3,7 +3,7 @@ const RebasingToken = artifacts.require("RebasingToken");
 const StakingContract = artifacts.require("StakingContract");
 
 module.exports = async (deployer) => {
-  await deployer.deploy(LPToken);
+  await deployer.deploy(LPToken, "LPToken", "LPT");
   const lpToken = await LPToken.deployed();
   console.log("LPToken", lpToken.address);
 
@@ -11,7 +11,7 @@ module.exports = async (deployer) => {
   const rebasingToken = await RebasingToken.deployed();
   console.log("RebasingToken", rebasingToken.address);
 
-  await deployer.deploy(StakingContract);
+  await deployer.deploy(StakingContract, lpToken.address, rebasingToken.address);
   const contract = await StakingContract.deployed();
   console.log("StakingContract", contract.address);
 };
