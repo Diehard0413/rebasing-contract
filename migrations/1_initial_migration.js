@@ -11,7 +11,7 @@ module.exports = async (deployer) => {
   const rebasingToken = await RebasingToken.deployed();
   console.log("RebasingToken", rebasingToken.address);
 
-  await deployer.deploy(StakingContract, lpToken.address, rebasingToken.address);
+  await deployer.deploy(StakingContract, lpToken.address, rebasingToken.address, rebasingToken.address);
   const stakingContract = await StakingContract.deployed();
   console.log("StakingContract", stakingContract.address);
 };
