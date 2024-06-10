@@ -11,12 +11,15 @@ contract StakingContract is Ownable {
     using SafeERC20 for IERC20;
     using SafeMath for uint256;
 
+    uint256 constant DENIMINATOR = 100000000;
+    uint256 constant YEAR = 365 days;
+
     IRebasingToken public rebasingToken;
     IERC20 public lpToken;
     address public poolAddress;
 
-    uint256 public fixedAPY = 5000; // 50% fixed APY (multiply by 100 for percentage)
-    uint256 public variableAPYMax = 5000; // 50% max variable APY
+    uint256 public fixedAPY = 31536000; // 50% fixed APY (multiply by 100 for percentage)
+    uint256 public variableAPYMax = 31536000; // 50% max variable APY
     uint256 public variableAPYMin = 1000; // 10% min variable APY
     uint256 public taxRate = 100; // 1% tax rate (multiply by 100 for percentage)
     
@@ -27,9 +30,9 @@ contract StakingContract is Ownable {
 
     mapping(address => StakerInfo) public stakers;
 
-    uint256 private _lastRewardTime;
-    uint256 private _accRewardPerShare;
-    uint256 private _totalStaked;
+    uint256 public _lastRewardTime;
+    uint256 public _accRewardPerShare;
+    uint256 public _totalStaked;
 
     event Stake(address indexed user, uint256 amount);
     event Unstake(address indexed user, uint256 amount);
@@ -95,7 +98,7 @@ contract StakingContract is Ownable {
             rebasingToken.transfer(msg.sender, pending);
         }
         if (amount > 0) {
-            uint256 tax = amount.mul(taxRate).div(10000);
+            uint256 tax = amount.mul(taxRate).div(DENIMINATOR);
             lpToken.transfer(msg.sender, amount.sub(tax));
             staker.amount = staker.amount.sub(amount);
             _totalStaked = _totalStaked.sub(amount);
@@ -124,9 +127,9 @@ contract StakingContract is Ownable {
             return;
         }
         uint256 multiplier = block.timestamp.sub(_lastRewardTime);
-        uint256 fixedReward = _totalStaked.mul(fixedAPY).div(10000).div(365 days).mul(multiplier);
+        uint256 fixedReward = _totalStaked.mul(fixedAPY).div(DENIMINATOR).div(YEAR).mul(multiplier);
         uint256 variableAPY = calculateVariableAPY(stakerAddr);
-        uint256 variableReward = _totalStaked.mul(variableAPY).div(10000).div(365 days).mul(multiplier);
+        uint256 variableReward = _totalStaked.mul(variableAPY).div(DENIMINATOR).div(YEAR).mul(multiplier);
         uint256 reward = fixedReward.add(variableReward);
         rebasingToken.rebase(reward, block.timestamp);
         _accRewardPerShare = _accRewardPerShare.add(reward.mul(1e18).div(_totalStaked));
